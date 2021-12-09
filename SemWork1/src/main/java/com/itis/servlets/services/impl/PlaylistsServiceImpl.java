@@ -103,7 +103,7 @@ public class PlaylistsServiceImpl implements PlaylistsService {
 				.build();
 
 		Playlist savedPlaylist = playlistsRepository.save(playlist);
-		if (playlist.getId() == null) {
+		if (playlistDto.getId() == null) {
 			List<SongDto> songs = playlistDto.getSongs();
 			for (SongDto song : songs) {
 				songsPlaylistsService.add(song.getId(), savedPlaylist.getId());
