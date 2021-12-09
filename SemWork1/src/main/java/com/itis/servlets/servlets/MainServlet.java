@@ -35,7 +35,7 @@ public class MainServlet extends HttpServlet {
 		songs.removeIf(songDto -> !songDto.getIsShared());
 		request.setAttribute("songs", songs);
 		List<PlaylistDto> playlists = playlistsService.getAll();
-		songs.removeIf(playlistDto -> !playlistDto.getIsShared());
+		playlists.removeIf(playlistDto -> !playlistDto.getIsShared());
 		request.setAttribute("playlists", playlists);
 		List<PostDto> posts = postsService.getAll();
 		request.setAttribute("posts", posts);
