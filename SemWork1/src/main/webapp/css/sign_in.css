@@ -1,0 +1,94 @@
+@font-face {
+    font-family: Helvetica;
+    src: url(/resources/fonts/Helvetica.otf)
+}
+
+html {
+    font-family: Helvetica, serif;
+}
+
+body {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.auth-button {
+    font-size: 14px;
+    margin-top: 2%;
+    display: block;
+    background: white;
+    color: gray;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    border-bottom: solid 1px rgba(16, 16, 16, 0.1);
+    position: fixed;
+    background-color: #a2c7e5;
+}
+
+header .inner {
+    width: 70%; /* This is the inner width of the content inside of your header (80%, etc) */
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+header .logo {
+    display: table;
+    height: 100%;
+    float: left;
+}
+
+header .logo div {
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header nav {
+    float: right;
+    height: 100%;
+}
+
+header nav li {
+    display: table;
+    height: 100%;
+    float: left;
+    margin-right: 30px;
+}
+
+header nav li:last-of-type {
+    margin-right: 0;
+}
+
+
+header nav span {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+header nav a {
+    color: #101010;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    color: white;
+}

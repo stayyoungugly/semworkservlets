@@ -1,0 +1,242 @@
+@font-face {
+    font-family: Helvetica;
+    src: url(/resources/fonts/helvetica.otf)
+}
+
+html {
+    font-family: Helvetica, serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.container {
+    width: 1000px;
+    margin: 30px auto 0;
+}
+
+.tabs {
+    width: 500px;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.tabs > input {
+    display: none;
+}
+
+.tabs > div {
+    display: none;
+    padding: 12px;
+    /*border: 1px solid #C0C0C0;*/
+    background: #FFFFFF;
+}
+
+.tabs > label {
+    display: inline-block;
+    padding: 7px 30px;
+    margin: 0 -5px -1px 0;
+    text-align: center;
+    color: #666666;
+    /*border: 1px solid #C0C0C0;*/
+    background: #E0E0E0;
+    cursor: pointer;
+}
+
+.tabs > input:checked + label {
+    color: #000000;
+    /*border: 1px solid #C0C0C0;*/
+    /*border-bottom: 1px solid #FFFFFF;*/
+    background: #FFFFFF;
+}
+
+#tab_1:checked ~ #txt_1,
+#tab_2:checked ~ #txt_2,
+#tab_3:checked ~ #txt_3 {
+    display: block;
+}
+
+.signup_form > form, .signup_form1 > form {
+    display: flex;
+    flex-direction: column;
+}
+
+.signup_form > form > input, .signup_form1 > form > input {
+    margin-top: 7px;
+    margin-bottom: 15px;
+}
+
+.player {
+    margin-top: 5px;
+    height: 20px;
+}
+
+.song-info {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    width: 380px;
+    margin: 40px auto 0;
+    border: 2px solid black;
+    padding: 5px;
+}
+
+.song-sub-info {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px
+}
+
+
+.song-cover {
+    width: 60px;
+    height: 60px;
+    border-radius: 10%;
+    object-fit: cover;
+}
+
+.album-info {
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    text-align: center;
+    margin: 40px auto 0;
+    padding: 10px;
+    justify-content: space-between;
+    border: 2px solid black;
+}
+
+.album-cover {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.album-creator, .album-title {
+    font-size: 13pt;
+}
+
+.album-creator {
+    margin-top: 30px;
+}
+
+.album-sub-info {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.song-creator {
+    margin-bottom: 0;
+}
+
+.song-link-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 10px;
+}
+
+.open {
+    margin: auto 0;
+}
+
+.open1 {
+    margin: auto 0;
+    font-size: 10pt;
+}
+
+.divider {
+    width: 100%;
+    height: 2px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: #ccc0c0;
+}
+
+.light_blue {
+    color: #4A90E2;
+}
+
+.text {
+    margin-bottom: 7px;
+}
+
+.posts-lists {
+    margin-top: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 80px;
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    border-bottom: solid 1px rgba(16, 16, 16, 0.1);
+    position: fixed;
+    background-color: #a2c7e5;
+}
+
+header .inner {
+    width: 70%; /* This is the inner width of the content inside of your header (80%, etc) */
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+header .logo {
+    display: table;
+    height: 100%;
+    float: left;
+}
+
+header .logo div {
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header nav {
+    float: right;
+    height: 100%;
+}
+
+header nav li {
+    display: table;
+    height: 100%;
+    float: left;
+    margin-right: 30px;
+}
+
+header nav li:last-of-type {
+    margin-right: 0;
+}
+
+
+header nav span {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+header nav a {
+    color: #101010;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    color: white;
+}

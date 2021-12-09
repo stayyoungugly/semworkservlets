@@ -1,0 +1,240 @@
+@font-face {
+    font-family: Helvetica;
+    src: url(/resources/fonts/Helvetica.otf)
+}
+
+html {
+    font-family: Helvetica, serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.container {
+    width: 500px;
+    margin: 50px auto 0;
+    border: 5px solid black;
+}
+
+.signup_form {
+    width: 400px;
+    margin: 10px auto 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin-top: 7px;
+    margin-bottom: 20px;
+}
+
+.list {
+    border: black 4px;
+}
+
+.demo {
+    margin-bottom: 40px;
+}
+
+/* скрываем чекбоксы и блоки с содержанием */
+.hide,
+.hide + label ~ div {
+    display: none;
+}
+
+/* вид текста label */
+.hide + label {
+    margin: 0;
+    padding: 0;
+    color: green;
+    cursor: pointer;
+    display: inline-block;
+}
+
+/* вид текста label при активном переключателе */
+.hide:checked + label {
+    color: red;
+    margin-bottom: 20px;
+    border-bottom: 0;
+}
+
+/* когда чекбокс активен показываем блоки с содержанием  */
+.hide:checked + label + div {
+    display: block;
+    padding-top: 5px;
+    border: 1px solid black;
+    /* чуточку анимации при появлении */
+    -webkit-animation: fade ease-in 0.5s;
+    -moz-animation: fade ease-in 0.5s;
+    animation: fade ease-in 0.5s;
+}
+
+/* анимация при появлении скрытых блоков */
+@-moz-keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.hide + label:before {
+    background-color: #1e90ff;
+    color: #fff;
+    content: "\002B";
+    display: block;
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+    width: 16px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.hide:checked + label:before {
+    content: "\2212";
+}
+
+h1 {
+    width: 300px;
+    font-size: 32px;
+}
+
+.player {
+    margin-top: 5px;
+    margin-bottom: 50px;
+    height: 20px;
+}
+
+.song-info {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    width: 380px;
+    margin: 10px auto 0;
+}
+
+.song-sub-info {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px
+}
+
+.song-cover {
+    width: 60px;
+    height: 60px;
+    border-radius: 10%;
+    object-fit: cover;
+}
+
+.submit-button {
+    width: 100px;
+    margin: 40px auto 0;
+    height: 40px;
+}
+
+.song-checkbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.song-checkbox > label {
+    font-size: 10pt;
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    border-bottom: solid 1px rgba(16, 16, 16, 0.1);
+    position: fixed;
+    background-color: #a2c7e5;
+}
+
+header .inner {
+    width: 70%; /* This is the inner width of the content inside of your header (80%, etc) */
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+header .logo {
+    display: table;
+    height: 100%;
+    float: left;
+}
+
+header .logo div {
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header nav {
+    float: right;
+    height: 100%;
+}
+
+header nav li {
+    display: table;
+    height: 100%;
+    float: left;
+    margin-right: 30px;
+}
+
+header nav li:last-of-type {
+    margin-right: 0;
+}
+
+
+header nav span {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+header nav a {
+    color: #101010;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    color: white;
+}
