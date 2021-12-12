@@ -43,7 +43,7 @@
         </#if>
         <div class="text-info">
             <p><b>Название:</b> ${song.getTitle()}</p>
-            <p><b>Исполнитель:</b>${song.getCreator()}</p>
+            <p><b>Исполнитель:</b> ${song.getCreator()}</p>
             <p><b>Описание:</b> ${song.getDescription()}</p>
             <p><b>Создан:</b> ${song.getCreatedAt()}</p>
         </div>
